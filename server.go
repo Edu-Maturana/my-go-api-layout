@@ -17,7 +17,8 @@ func NewServer(port string) *Server {
 }
 
 func (s *Server) Listen() error {
-	http.Handle("/", s.router)
+	http.Handle("/", s.router) // Entry endpoint
+
 	err := http.ListenAndServe(s.port, nil)
 	if err != nil {
 		return err

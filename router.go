@@ -15,6 +15,7 @@ func NewRouter() *Router {
 	}
 }
 
+// The requirement to server can use this router
 func (r *Router) ServeHTTP(w http.ResponseWriter, request *http.Request) {
 	fmt.Fprintf(w, " Hello world")
 }
